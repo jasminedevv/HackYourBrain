@@ -1,75 +1,54 @@
-{% load staticfiles %}
-{% load tz %}
+{% load staticfiles %} {% load tz %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="bleh">
-  <title>Hack Your Brain</title>
 
-  <!-- Bootstrap -->
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="bleh">
+    <title>Hack Your Brain</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    </head>
-    <body>
-      <div class="container">
-            <div class="app">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
             <div class="row">
-            <div class="">
-              <h1>Choose Wisely</h1>
-              <div class="feedback-icons">
-                <i class="fa fa-leaf" aria-hidden="true"></i>
-              </div>
-              <div id="the-image" class="invisible-button">
-                <a id="left" href="{% if food.good %}/increment_points{% else %}/bad{% endif %}"><div class="left"></div></a>
-                <a id="right" href="{% if not food.good %}/increment_points{% else %}/bad{% endif %}"><div class="right"></div></a>
-              <img src="{{ food.image.url }}"/>
-              </div>
+                <div class="">
+                    <h1>Choose Wisely</h1>
+                    <div class="feedback-icons">
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                    </div>
+                    <div id="the-image" class="invisible-button">
+                        <a id="left" href="{% if food.good %}/increment_points{% else %}/bad{% endif %}">
+                            <div class="left"></div>
+                        </a>
+                        <a id="right" href="{% if not food.good %}/increment_points{% else %}/bad{% endif %}">
+                            <div class="right"></div>
+                        </a>
+                        <img src="{{ food.image.url }}" />
+                    </div>
+                </div>
             </div>
-            </div>
-            </div>
-
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-          <!-- Include all compiled plugins (below), or include individual files as needed -->
-          <script src="js/bootstrap.min.js"></script>
-            <script src="https://use.fontawesome.com/64a5cea4a4.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-      <div class="container card">
-        <p>
-          <h1>Hack Your Brain!</h1>
-          <img src="/{{ food.image.score }}" alt="" />
-        </p>
-
-        <a class='btn btn-primary col-sm-6' href="/increment_points">Good!</a>
-        <a class='btn btn-danger col-sm-6' href="/bad">Bad!</a>
-        <p>
-          score: {{ user.profile.score }}
-        </p>
         </div>
+      </div>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="{% static 'js/jquery.min.js' %}"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-    </html>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/64a5cea4a4.js"></script>
+</body>
+
+</html>
