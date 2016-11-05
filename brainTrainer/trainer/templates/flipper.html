@@ -31,10 +31,10 @@
                         <i class="fa fa-leaf" aria-hidden="true"></i>
                     </div>
                     <div id="the-image" class="invisible-button">
-                        <a id="left" href="{% if food.good %}/increment_points{% else %}/bad{% endif %}">
+                        <a id="left" href="{% if food.good %}/increment_points{% else %}/decrement_points{% endif %}">
                             <div class="left"></div>
                         </a>
-                        <a id="right" href="{% if not food.good %}/increment_points{% else %}/bad{% endif %}">
+                        <a id="right" href="{% if not food.good %}/increment_points{% else %}/decrement_points{% endif %}">
                             <div class="right"></div>
                         </a>
                         <img src="{{ food.image.url }}" />

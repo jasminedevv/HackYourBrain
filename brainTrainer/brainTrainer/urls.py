@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^garden/', garden),
     url(r'^game/', flipper),
     url(r'^increment_points', increment_points),
+    url(r'^decrement_points', decrement_points),
     url(r'^$', menu)
 ]
 

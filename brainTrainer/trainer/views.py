@@ -25,3 +25,11 @@ def increment_points(request):
     foods = Food.objects.all()
     food = random.choice(foods)
     return render(request, 'flipper.html', {'food':food})
+
+def decrement_points(request):
+    user_profile = request.user.profile
+    user_profile.score -= 1
+    request.user.save()
+    foods = Food.objects.all()
+    food = random.choice(foods)
+    return render(request, 'flipper.html', {'food':food})
