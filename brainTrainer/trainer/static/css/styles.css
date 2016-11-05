@@ -1,0 +1,45 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#374B5E;
+  background-color: #BE92A2;
+  margin: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.container {
+  width: 600px;
+}
+.app {
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 50px 20px 50px;
+}
+.feedback-icons {
+  padding: 10px;
+}
+.invisible-button {
+  position: relative;
+}
+.left {
+  width:235px;
+  height: 470px;
+  position: absolute;
+}
+.right {
+  width: 235px;
+  height: 470px;
+  position: absolute;
+  left: 235px;
+}
+button.register2{
+	border:1px;
+	border-radius:5px;
+	font-size:60px;
+	height:135px;
+	width:470px;
+	background-color:#00afb7;
+	color:white;
+	position:relative;
+	margin-bottom:1em;
+}
