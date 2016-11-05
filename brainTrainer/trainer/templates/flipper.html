@@ -11,22 +11,8 @@
 
   <!-- Bootstrap -->
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
-  <style media="screen">
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-    .card {
-      height: 600px;
-      margin: 0 auto;
-    }
-    .card.p {
-      text-align: center;
-    }
-  </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,10 +21,43 @@
       <![endif]-->
     </head>
     <body>
+      <div class="container">
+            <div class="app">
+            <div class="row">
+            <div class="">
+              <h1>Choose Wisely</h1>
+              <div class="feedback-icons">
+                <i class="fa fa-leaf" aria-hidden="true"></i>
+              </div>
+              <div id="the-image" class="invisible-button">
+                <a id="left" href="{% if food.good %}/increment_points{% else %}/bad{% endif %}"><div class="left"></div></a>
+                <a id="right" href="{% if not food.good %}/increment_points{% else %}/bad{% endif %}"><div class="right"></div></a>
+              <img src="{{ food.image.url }}"/>
+              </div>
+            </div>
+            </div>
+            </div>
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="js/bootstrap.min.js"></script>
+            <script src="https://use.fontawesome.com/64a5cea4a4.js"></script>
+
+
+
+
+
+
+
+
+
+
+
       <div class="container card">
         <p>
           <h1>Hack Your Brain!</h1>
-          <img src="/{{ food }}" alt="" />
+          <img src="/{{ food.image.score }}" alt="" />
         </p>
 
         <a class='btn btn-primary col-sm-6' href="/increment_points">Good!</a>

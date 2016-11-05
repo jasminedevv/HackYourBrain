@@ -1,0 +1,40 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#374B5E;
+  background-color: #BE92A2;
+  margin: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.container {
+  width: 600px;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.app {
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 50px 20px 50px;
+}
+.feedback-icons {
+  padding: 10px;
+}
+.invisible-button {
+  position: relative;
+}
+.left {
+  width:235px;
+  height: 470px;
+  position: absolute;
+}
+.right {
+  width: 235px;
+  height: 470px;
+  position: absolute;
+  left: 235px;
+}

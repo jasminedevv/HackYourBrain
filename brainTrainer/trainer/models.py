@@ -18,11 +18,6 @@ class Plant(models.Model):
     weed = models.BooleanField(default=True)
     image = models.ImageField(upload_to='plant-images')
 
-# class UserScore(models.Model):
-#     score = models.IntegerField(default=0)
-#     def __str__(self):
-#         return 'Profile of user: {}'.format(self.user.username)
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     score = models.IntegerField(default=0)

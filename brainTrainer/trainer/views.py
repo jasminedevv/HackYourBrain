@@ -23,5 +23,5 @@ def increment_points(request):
     user_profile.score += 1
     request.user.save()
     foods = Food.objects.all()
-    food = random.choice(foods).image.url
+    food = random.choice(foods)
     return render(request, 'flipper.html', {'food':food})
