@@ -20,5 +20,7 @@ from trainer.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', front_page)
+    url(r'^garden/', garden),
+    url(r'^game/', flipper),
+    url(r'^$', menu)
 ]

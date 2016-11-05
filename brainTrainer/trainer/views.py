@@ -3,6 +3,13 @@ from models import *
 
 # Create your views here.
 
-def front_page(request):
+def flipper(request):
     foods = Food.objects.all()
-    return render(request, 'index.html', {'foods': foods})
+    return render(request, 'flipper.html', {'foods': foods})
+
+def garden(request):
+    plants = Plant.objects.all()
+    return render(request, 'garden.html', {'plants': plants})
+
+def menu(request):
+    return render(request, 'menu.html')
