@@ -1,5 +1,6 @@
 */env/
 /env
+/media/*
 /migrations
 *.pyc
 *.log
