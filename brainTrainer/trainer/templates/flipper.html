@@ -12,6 +12,21 @@
   <!-- Bootstrap -->
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+  <style media="screen">
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .card {
+      height: 600px;
+      margin: 0 auto;
+    }
+    .card.p {
+      text-align: center;
+    }
+  </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,7 +35,19 @@
       <![endif]-->
     </head>
     <body>
-      <h1>Hack Your Brain!</h1>
+      <div class="container card">
+        <p>
+          <h1>Hack Your Brain!</h1>
+          <img src="/{{ food }}" alt="" />
+        </p>
+
+        <a class='btn btn-primary col-sm-6' href="/increment_points">Good!</a>
+        <a class='btn btn-danger col-sm-6' href="/bad">Bad!</a>
+        <p>
+          score: {{ user.profile.score }}
+        </p>
+        </div>
+
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="{% static 'js/jquery.min.js' %}"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
