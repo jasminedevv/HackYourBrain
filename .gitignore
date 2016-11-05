@@ -1,7 +1,8 @@
 */env/
 /env
-/media/*
-/migrations
+media
+/food-images
+/plant-images
 *.pyc
 *.log
 */migrations
