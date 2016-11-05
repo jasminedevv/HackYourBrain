@@ -31,3 +31,9 @@ python manage.py makemigrations trainer && python manage.py migrate
 ```
 python manage.py runserver
 ```
+to create an admin:
+```
+python manage.py createsuperuser
+```
+go to [http://localhost:8000/admin/](http://localhost:8000/admin/) and add some models to the database.
+Then go to [http://localhost:8000/](http://localhost:8000/)
