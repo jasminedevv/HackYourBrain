@@ -31,6 +31,14 @@ python manage.py makemigrations trainer && python manage.py migrate
 ```
 python manage.py runserver
 ```
+If you get an error like this:
+    __import__(name)
+ImportError: No module named PIL
+Verify  you are running pip version of at least 8.x. Then  run the following:
+```
+pip install image
+```
+
 to create an admin:
 ```
 python manage.py createsuperuser
