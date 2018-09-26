@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 
-from models import *
+from trainer.models import Food, Plant
 import random
 
 # Create your views here.
@@ -11,9 +11,9 @@ def flipper(request):
     food = random.choice(foods).image.url
     return render(request, 'flipper.html', {'food':food})
 
-def garden(request):
-    plants = Plant.objects.all()
-    return render(request, 'garden.html', {'plants': plants})
+# def garden(request):
+#     plants = Plant.objects.all()
+#     return render(request, 'garden.html', {'plants': plants})
 
 def menu(request):
     return render(request, 'menu.html')

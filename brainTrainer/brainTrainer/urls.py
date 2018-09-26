@@ -16,18 +16,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from trainer.views import *
+from django.urls import path
+# from django.contrib.admin import site
+from trainer.views import flipper, increment_points, decrement_points, menu
+import trainer.admin
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^garden/', garden),
-    url(r'^game/', flipper),
-    url(r'^increment_points', increment_points),
-    url(r'^decrement_points', decrement_points),
-    url(r'^$', menu)
+    path('admin/', admin.site.urls),
+    # url(r'^garden/', garden),
+    path('game/', flipper),
+    path('increment_points', increment_points),
+    path('decrement_points', decrement_points),
+    path('/', menu)
 ]
 
 if settings.DEBUG is True:

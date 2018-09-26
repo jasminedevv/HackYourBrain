@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import *
+from trainer.models import Plant, Food
 
 # Register your models here.
 admin.site.register(Food)
