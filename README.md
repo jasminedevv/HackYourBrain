@@ -6,33 +6,39 @@ For the We Code Hackathon 2016
 Install Python 2.7
 * clone the project
 * cd into the project directory
+``` bash
+cd HackYourBrain
+```
+* install virtualenv:
 
 ``` bash
 pip install virtualenv
 ```
-
+* create a new virtualenv called env
 ``` bash
 virtualenv env
 ```
-    On Mac:
-    
-    ``` bash
-    source env/bin/activate
-    ```
-    On Windows:
-    ``` bash
-    source env\Scripts\activate 
-    ```
-    
-# let me know if this works
+* start up your new env
 
-Make sure there is a little (env) in front of your prompt
+On Mac:
+    
+``` bash
+source env/bin/activate
+```
+On Windows:
+
+``` bash
+source env\Scripts\activate 
+```
+
+Make sure there is a little (env) in front of your prompt.
+### Install dependencies
 
 ```
 pip install django && pip install pillow
 ```
 
-# Change to braintrainer directory and run the following: 
+### cd to braintrainer directory and run the following: 
 
 ```
 python manage.py makemigrations trainer && python manage.py migrate
@@ -48,7 +54,7 @@ If you get an error like this:
 ImportError: No module named PIL
 ```
 
-Verify  you are running pip version of at least 8.x. Then  run the following:
+Verify you are running pip version of at least 8.x. Then  run the following:
 ``` bash
 pip install image
 ```
@@ -58,7 +64,7 @@ to create an admin:
 python manage.py createsuperuser
 ```
 
-# Start the server
+### Start the server
 ``` bash
 python manage.py runserver
 ```
