@@ -3,7 +3,7 @@ An app that uses pictures of food to train your brain to have negative associati
 For the We Code Hackathon 2016
 
 # Installation
-Install Python 2.7
+Install Python 3.x
 * clone the project
 * cd into the project directory
 ``` bash
@@ -33,6 +33,7 @@ source env\Scripts\activate
 
 Make sure there is a little (env) in front of your prompt.
 ### Install dependencies
+This project recently updated for Django 2.1
 
 ```
 pip install django && pip install pillow
