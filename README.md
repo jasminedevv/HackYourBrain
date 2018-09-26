@@ -7,26 +7,31 @@ Install Python 2.7
 * clone the project
 * cd into the project directory
 
-```
+``` bash
 pip install virtualenv
 ```
-```
+
+``` bash
 virtualenv env
 ```
     On Mac:
-    ```
+    
+    ``` bash
     source env/bin/activate
     ```
     On Windows:
-    ```
+    ``` bash
     source env\Scripts\activate 
     ```
+    
 # let me know if this works
-```
+
 Make sure there is a little (env) in front of your prompt
+
 ```
 pip install django && pip install pillow
 ```
+
 # Change to braintrainer directory and run the following: 
 
 ```
@@ -38,30 +43,34 @@ python manage.py ls
 ```
 
 If you get an error like this:
+``` bash
     __import__(name)
 ImportError: No module named PIL
-Verify  you are running pip version of at least 8.x. Then  run the following:
 ```
+
+Verify  you are running pip version of at least 8.x. Then  run the following:
+``` bash
 pip install image
 ```
 
 to create an admin:
-```
+``` bash
 python manage.py createsuperuser
 ```
 
 # Start the server
-```
+``` bash
 python manage.py runserver
 ```
 
-To stop the server, type:
-```
+To stop the server, do:
+
+``` bash
 CTRL-C
 ```
 
 To stop virtualenv, type:
-```
+``` bash
 deactivate
 ```
 
